@@ -125,4 +125,8 @@ Cache.prototype.del = function(key) {
   return getPromise(this, 'del', this.config.keyPrefix + key);
 };
 
+Cache.prototype.flush = function() {
+  return getPromise(this, 'flush');
+};
+
 module.exports = Cache;
